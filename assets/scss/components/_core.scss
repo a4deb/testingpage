@@ -1,0 +1,116 @@
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    outline:none;
+}
+
+html{
+    
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+   
+    
+
+    &[ lang = "en"]{
+        font-family: $ft-en ;
+        direction:ltr;
+    }
+
+   
+    &.is-loading{
+        overflow: hidden;
+    }
+
+    &.is-loaded{
+        overflow: unset;
+
+        .mainWrapper{
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    .mainWrapper{
+        opacity: 0;
+        transition: ease .3s opacity;
+        visibility: hidden;
+    }
+
+}
+
+*[ data-lang = "en"]{
+    font-family: $ft-en ;
+    direction:ltr;
+}
+
+
+
+body{
+    background: $black;
+    font-family: $ft-en;
+    margin:0;
+    padding:0;
+   
+    // &:hover {
+    //     #cursor, #cursorBorder {
+    //       opacity: 1;
+    //     }
+    //   }
+}
+
+
+
+
+#app{
+    
+    height: 100vh; /* Use vh as a fallback for browsers that do not support Custom Properties */
+    height: calc(var(--vh, 1vh) * 100);
+}
+
+
+
+main{
+    // height: 100vh; /* Use vh as a fallback for browsers that do not support Custom Properties */
+    height: 100%;
+
+
+    &.home{
+        padding-top: 0px;
+     
+    }
+    
+    section{
+        padding: 0;
+
+        @include lg{
+            padding:0;
+            
+        }
+    }
+}
+
+.container{
+    max-width: 100%;
+    padding-right: 24px;
+    padding-left: 24px;
+
+    @include xl{
+        max-width: 1460px;
+        padding-right: 50px;
+        padding-left: 50px;
+    }
+
+    @include xxl{
+        max-width: 1760px;
+        padding-right: 50px;
+        padding-left: 50px;
+    }
+}
+
+
+
+
+
+

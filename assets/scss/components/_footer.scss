@@ -1,0 +1,71 @@
+footer{
+    padding: 60px 0;
+
+    @include lg {
+      padding: 100px 0;
+    }
+
+    .f-information{
+        .content-image{
+            margin-bottom: 50px;
+
+            img{
+                width: 60px !important;
+            }
+        }
+
+        .content-text{
+            .g-title{
+                line-height: 1.2;
+            }
+
+            .address{
+                margin-top: 30px;
+                color: rgba($white, $alpha: .5);
+            }
+        }
+    }
+
+    .f-quickLinks{
+        .content-text{
+          padding-top: 50px;
+
+          @include lg {
+            padding-top: 0;
+          }
+            .g-title{
+                margin-bottom: 20px;
+
+            }
+
+            ul{
+                li{
+                    a{
+                        color: rgba($white, $alpha: .5);
+                        line-height: 1.8;
+
+                        &:hover{
+                            color: rgba($white, $alpha: 1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .copyright{
+        margin-top: 40px;
+
+        .d-block {
+          padding-bottom: 10px;
+        }
+
+       .social{
+           a{
+               img{
+                   width: 30px;
+               }
+           }
+       }
+    }
+}
